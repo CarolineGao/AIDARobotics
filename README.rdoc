@@ -1,0 +1,4 @@
+Bugsters is a result-based crowd-busting platform.
+
+0.1 version - front-end finished.
+0.2 version - back-end MVP is working. 

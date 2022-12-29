@@ -1,0 +1,95 @@
+<!-- Topbar -->
+<div id="header-top">
+    <div class="container">
+        <div class="top-bar">
+            <div class="pull-left sample-1right hidden-xs">
+                <a><i class="fa fa-phone"></i> Call us: <span class="colored-text">+61 466270892</span> </a>
+                <a><i class="fa fa-envelope"></i> Mail us: <span class="colored-text">techcarolinegao@gmail.com</span> </a>
+            </div>
+            <div class="pull-right">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="search">
+
+                        <button type="button"><i class="fa fa-search"></i></button>
+
+                    </div><!--input group-->
+                </form><!--form-->
+            </div>
+        </div>
+    </div>
+</div><!--top bar end hidden in small devices-->
+
+<!-- Static Navbar -->
+<div class="navbar navbar-default navbar-static-top yamm sticky" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/home"><img src="<%= asset_path "logo-1.png" %>" alt="AIDA Robotics"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <% if logged_in? %>
+                <li><%= link_to "Discover Products", products_path %></li>
+                <li><%= link_to "Busters", testers_path %></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><%= link_to "Dashboard", '#' %></li>
+                    <li><%= link_to "Profile", current_tester %></li>
+                    <li><%= link_to "Settings", edit_tester_path(current_tester) %></li>
+                    <li>
+                      <%= link_to "Log out", logout_path, method: "delete" %>
+                    </li>
+                  </ul>
+                </li>
+              <% else %>
+
+                <!--<li><a href="/processes">How it works</a></li>-->
+                <!--<li><a href="/products">Products</a></li>-->
+                <li><a href="/home">Home</a></li>
+                <li><a href="/busters">Robot Products</a></li>
+                <li><a href="/techexperts">AI Solutions</a></li>
+                <li><a href="/about">About Us</a></li>
+                <!--<li><a href="/prices">Pricing</a></li>-->
+                <!--<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/blogs">Blogs</a></li>
+                        <li><a href="/contacts">Contact</a></li>
+                        <li><a href="/career">Career</a></li>
+                        <li><a href="/faqs">FAQS</a></li>
+                    </ul>
+                </li>-->
+
+
+
+
+                <!-- menu Sign Up start here-->
+                <!--
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign Up<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/companies/signup"><h4 align="center">Create a Product</h4>
+                        <p align="center"><font size="3">Register as a Company</font></p></a></li>
+                    <li><a href="/testers/signup"><h4 align="center">Become a Buster</h4>
+                        <p align="center"><font size="3">Create an Account</font></p></a></li>
+                  </ul>
+                </li> -->
+                <!-- menu Sign Up end here-->
+
+
+              <% end %>
+
+            </ul>
+
+        </div><!--/.nav-collapse -->
+
+
+    </div><!--container-->
+</div><!--navbar-default-->
